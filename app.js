@@ -2,19 +2,15 @@ const app = Vue.createApp({
   data() {
     return{
       showBook: false,
-      title: 'the final empire',
-      author: 'Raj maharjan',
-      age: 22,
-      x: 0,
-      y: 0
-
+      books:[
+      {title: 'name of the wind', author: 'patric hero'},
+      {title: 'name of the air', author: 'patric hero'},
+      {title: 'name of the wildd', author: 'patric hero'},
+      {title: 'hello of the widow', author: 'patric hero'},
+      ]
     }
   },
-  // methods: {
-  //   changeTitle(title) {
-  //     this.title = title
-  //   }
-  // }
+
 
   methods: {
     toggleShowBook(){
