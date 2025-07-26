@@ -39,11 +39,12 @@
         <!-- Example of attribute binding: binding a dynamic URL to the href attribute -->
         <!-- <a :href="url" target="_blank">Visit Vue.js</a> -->
      <!-- <a v-bind:href="url">this is a website</a> or -->
-     <a :href="url">this is a website</a> 
+     <!-- <a :href="url">this is a website</a>  -->
+
 
       <div v-if="showBook">
         <ul>
-          <li v-for="book in books" :class="{fav: book.isFav}" @click="toggleisFav(book)">
+          <li v-for="book in filteredBooks " :class="{fav: book.isFav}" @click="toggleisFav(book)">
             <img :src="book.img" alt="book.title">
             <h3>{{book.title}}</h3>
             <p>{{book.author}} </p>

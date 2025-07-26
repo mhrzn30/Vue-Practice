@@ -14,31 +14,23 @@ const app = Vue.createApp({
   },
 
 
-  methods: {
+  methods: { 
     toggleShowBook(){
       this.showBook = !this.showBook
     },
 
     toggleisFav(book){
       book.isFav = !book.isFav
-    },
+    }, 
 
-    handleEvent(event,data) {
-    console.log(event,event.type )
-    if(data){
-      console.log(data)
-      
-    }
-    },
+ 
+      },
 
-    handleMouseMove(e) {
-     this.x = e.offsetX
-     this.y = e.offsetY
-      
-    }
-  }
-
-  
+      computed:{
+      filteredBooks(){
+        return this.books.filter((book) => book.isFav )
+      }
+     }
 });
 
 app.mount("#app");
